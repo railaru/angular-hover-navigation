@@ -1,0 +1,43 @@
+<header>
+  <div class="container">
+    <nav class="navbar" (mouseleave)="setCurrentDropDownId(null)">
+      <div class="navbar__left" (mouseenter)="setCurrentDropDownId(null)">
+        <a href="#" class="navbar__logo">
+          <img src="https://corti.ai/img/logo.png" class="responsive-img" alt="">
+        </a>
+      </div>
+      <div class="navbar__center">
+        <ul class="navbar__list list-style-none">
+          <li class="navbar__list__item">
+            <a href="" class="navbar__list__item__link color-1 font-1 position-relative" (mouseover)="setCurrentDropDownId(0)">
+              Technology
+              <app-navbar-dropdown *ngIf="currentDropDownId == 0"></app-navbar-dropdown>
+            </a>
+          </li>
+          <li class="navbar__list__item">
+            <a href="" class="navbar__list__item__link color-1 font-1 position-relative" (mouseover)="setCurrentDropDownId(1)">
+              Products
+              <app-navbar-dropdown *ngIf="currentDropDownId == 1"></app-navbar-dropdown>
+            </a>
+          </li>
+          <li class="navbar__list__item">
+            <a href="" class="navbar__list__item__link color-1 font-1 position-relative" (mouseover)="setCurrentDropDownId(2)">
+              About us
+              <app-navbar-dropdown *ngIf="currentDropDownId == 2"></app-navbar-dropdown>
+            </a>
+          </li>
+          <li class="navbar__list__item" (mouseenter)="setCurrentDropDownId(null)">
+            <a href="" class="navbar__list__item__link color-1 font-1 position-relative">
+              Press & testimonials
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar__right">
+        <a href="#" class="link-with-icon font-1 color-2">
+          Request a demo
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,1 +1,155 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~normalize.css";
+
+@font-face {
+  font-family: Roboto;
+  src: url('./fonts/Roboto-Thin.ttf');
+}
+@font-face {
+  font-family: Roboto;
+  src: url('./fonts/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: Roboto;
+  src: url('./fonts/Roboto-Medium.ttf');
+}
+
+body{
+  font-family: Roboto, sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+//components
+.navbar{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  height: 75px;
+  &__dropdown{
+    width: 200px;
+    left: -70px;
+    top: 30px;
+    &__list{
+      padding: 4px 12px 12px;
+      &:after{
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 0 8px 10px;
+        border-color: #FFFFFF transparent;
+        display: block;
+        width: 0;
+        z-index: 1;
+        margin-left: -8px;
+        top: -10px;
+        left: 50%;
+      }
+      &__item{
+        margin-top: 12px;
+        &__link{
+          display: block;
+          padding: 12px;
+          &__description{
+              margin-top: px;
+          }
+          &:hover{
+            background: rgba(#555, 0.025);
+          }
+        }
+      }
+    }
+  }
+  &__logo{
+    max-width: 111px;
+  }
+  &__list{
+    &__item{
+      display: inline-block;
+      margin-right: 25px;
+      &:last-of-type{
+        margin-right: 0;
+      }
+      &__link{
+        display: inline-block;
+      }
+    }
+  }
+  &__left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+//fonts
+.font-1{
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .03rem;
+  text-transform: uppercase;
+}
+.font-2{
+  font-size: .8rem;
+  margin-bottom: .12rem;
+  font-weight: 300;
+}
+.font-3{
+  line-height: 1.2;
+  ont-size: .8rem;
+  text-transform: none;
+}
+
+//colors
+.color-1{
+  color: rgba(73,73,82,.4);
+}
+.color-2{
+  color: #4d83ff;
+}
+
+.bg-3{
+  background: #fff;
+}
+
+//utilities
+.container{
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 25px;
+  max-width: 1280px;
+}
+
+.list-style-none{
+  list-style: none;
+}
+
+.responsive-img{
+  width: 100%;
+  height: auto;
+}
+
+.position-relative{
+  position: relative;
+}
+
+.position-absolute{
+  position: absolute;
+}
+
+//elevation
+.elevation-1{
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.1), 0 6px 10px 0 rgba(0,0,0,.07), 0 1px 18px 0 rgba(0,0,0,.06);
+}
+
